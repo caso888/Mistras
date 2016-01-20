@@ -254,7 +254,7 @@ Class Transformer
             If cmd.ExecuteNonQuery() Then
                 MsgBox("Successful", MsgBoxStyle.Information, "Insert")
             Else
-                MsgBox("Error", MsgBoxStyle.Information, "Insert")
+                MsgBox("Error!", MsgBoxStyle.Information, "Insert")
             End If
             desconectado()
         End Using
