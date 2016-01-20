@@ -1,0 +1,11 @@
+﻿<Window x:Class="MenuP"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MenuP"  Height="564" Width="1024" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" WindowStartupLocation="CenterScreen">
+    <Grid Width="945" Height="472" Background="#FFC50200">
+        <Button Content="Transformer" Height="54" HorizontalAlignment="Left" Margin="240,150,0,0" Name="Transformer_btn" VerticalAlignment="Top" Width="192" />
+        <Button Content="Oil Quality" Height="54" HorizontalAlignment="Left" Margin="480,150,0,0" Name="OilQuality_btn" VerticalAlignment="Top" Width="192" />
+        <Button Content="Catalogs" Height="54" HorizontalAlignment="Left" Margin="240,240,0,0" Name="Catalogs_btn" VerticalAlignment="Top" Width="192" />
+        <Button Content="Salir" Height="54" HorizontalAlignment="Left" Margin="480,240,0,0" Name="Button4" VerticalAlignment="Top" Width="192" />
+    </Grid>
+</Window>
