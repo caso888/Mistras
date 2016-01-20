@@ -6,19 +6,7 @@ Mistras
 </name>
 </assembly>
 <members>
-<member name="M:Mistras.Application.InitializeComponent">
-	<summary>
-InitializeComponent
-</summary>
-</member><member name="M:Mistras.Application.Main">
-	<summary>
-Application Entry Point.
-</summary>
-</member><member name="T:Mistras.Application">
-	<summary>
-Application
-</summary>
-</member><member name="M:Mistras.OilQuality.InitializeComponent">
+<member name="M:Mistras.OilQuality.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>
@@ -34,13 +22,17 @@ InitializeComponent
 	<summary>
 MenuP
 </summary>
-</member><member name="M:Mistras.Transformer.InitializeComponent">
+</member><member name="M:Mistras.Application.InitializeComponent">
 	<summary>
 InitializeComponent
 </summary>
-</member><member name="T:Mistras.Transformer">
+</member><member name="M:Mistras.Application.Main">
 	<summary>
-Transformer
+Application Entry Point.
+</summary>
+</member><member name="T:Mistras.Application">
+	<summary>
+Application
 </summary>
 </member><member name="M:Mistras.Catalogs.InitializeComponent">
 	<summary>
@@ -49,6 +41,14 @@ InitializeComponent
 </member><member name="T:Mistras.Catalogs">
 	<summary>
 Catalogs
+</summary>
+</member><member name="M:Mistras.Transformer.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:Mistras.Transformer">
+	<summary>
+Transformer
 </summary>
 </member><member name="P:Mistras.My.MyWpfExtension.Application">
 	<summary>

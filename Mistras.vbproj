@@ -160,5 +160,8 @@
     </None>
     <AppDesigner Include="My Project\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mistras-icon-300x300.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
