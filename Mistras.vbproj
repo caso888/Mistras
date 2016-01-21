@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpf.Core.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Gauges.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpf.LayoutControl.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -78,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="gauge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MenuP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +101,9 @@
     </Compile>
     <Compile Include="Catalogs.xaml.vb">
       <DependentUpon>Catalogs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gauge.xaml.vb">
+      <DependentUpon>gauge.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuP.xaml.vb">
       <DependentUpon>MenuP.xaml</DependentUpon>

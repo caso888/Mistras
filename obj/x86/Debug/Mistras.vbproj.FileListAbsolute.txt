@@ -61,3 +61,5 @@ C:\Users\Elias Zetune\Documents\Visual Studio 2010\Projects\Mistras\Mistras\obj\
 C:\Users\Elias Zetune\Documents\Visual Studio 2010\Projects\Mistras\Mistras\obj\x86\Debug\Mistras.Resources.resources
 C:\Users\Elias Zetune\Documents\Visual Studio 2010\Projects\Mistras\Mistras\obj\x86\Debug\Mistras.vbproj.GenerateResource.Cache
 C:\Users\Elias Zetune\Documents\Visual Studio 2010\Projects\Mistras\Mistras\obj\x86\Debug\Mistras.exe.licenses
+C:\Users\Elias Zetune\Documents\Visual Studio 2010\Projects\Mistras\Mistras\obj\x86\Debug\gauge.baml
+C:\Users\Elias Zetune\Documents\Visual Studio 2010\Projects\Mistras\Mistras\obj\x86\Debug\gauge.g.vb

@@ -52,6 +52,7 @@ Public Class MenuP
             Return False
         End Try
     End Function
+
     Public Function conectado()
         Try
             If cnn.State = ConnectionState.Closed Then
@@ -66,4 +67,10 @@ Public Class MenuP
             Return False
         End Try
     End Function
+
+    Private Sub gauge_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles gauge.Click
+        Dim gg As New gauge()
+        gg.Show()
+        Me.Hide()
+    End Sub
 End Class

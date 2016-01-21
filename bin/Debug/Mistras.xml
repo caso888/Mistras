@@ -42,6 +42,14 @@ InitializeComponent
 	<summary>
 Catalogs
 </summary>
+</member><member name="M:Mistras.gauge.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:Mistras.gauge">
+	<summary>
+gauge
+</summary>
 </member><member name="M:Mistras.Transformer.InitializeComponent">
 	<summary>
 InitializeComponent
