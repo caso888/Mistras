@@ -1,0 +1,69 @@
+﻿<Window x:Class="Catalogs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Catalogs"  Height="564" Width="1024" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" WindowStartupLocation="CenterScreen" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core">
+    <Grid Width="945" Height="472">
+        <dx:DXTabControl Margin="12" Name="DXTabControl1">
+            <dx:DXTabItem Header="Manufacturer" Name="Manufacturer">
+                <Grid>
+                    <Label Content="Manufacturer" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label1" VerticalAlignment="Top" Width="108" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Manufacturer:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label2" VerticalAlignment="Top" Width="84" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="TextEdit1" VerticalAlignment="Top" Width="150" />
+                </Grid>
+            </dx:DXTabItem> 
+            <dx:DXTabItem Header="Substation" Name="Substation">
+                <Grid >
+                    <Label Content="Substation" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label3" VerticalAlignment="Top" Width="108" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Substation:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label4" VerticalAlignment="Top" Width="84" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="TextEdit2" VerticalAlignment="Top" Width="150" />
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Transformer Utility" Name="TransformerUtility">
+                <Grid >
+                    <Label Content="Transformer Utility" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label5" VerticalAlignment="Top" Width="154" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Transformer Utility::" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label6" VerticalAlignment="Top" Width="121" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="TextEdit3" VerticalAlignment="Top" Width="150" />
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Transformer Type" Name="TransformerType">
+                <Grid >
+                    <Label Content="Transformer Type" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label7" VerticalAlignment="Top" Width="139" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Transformer Type:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label8" VerticalAlignment="Top" Width="108" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="TextEdit4" VerticalAlignment="Top" Width="150" />
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Transformer Phase" Name="TransformerPhase">
+                <Grid >
+                    <Label Content="Transformer Phase" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label9" VerticalAlignment="Top" Width="155" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Transformer Phase:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label10" VerticalAlignment="Top" Width="118" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="TextEdit5" VerticalAlignment="Top" Width="150" />
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Core" Name="Core">
+                <Grid >
+                    <Label Content="Core" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label11" VerticalAlignment="Top" Width="108" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Core:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label12" VerticalAlignment="Top" Width="84" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="TextEdit6" VerticalAlignment="Top" Width="150" />
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Unit" Name="Unit">
+                <Grid >
+                    <Label Content="Unit" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label13" VerticalAlignment="Top" Width="108" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Unit:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label14" VerticalAlignment="Top" Width="84" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="Unit_txt" VerticalAlignment="Top" Width="150" />
+                    <Label Content="Unit Type:" Height="28" HorizontalAlignment="Left" Margin="6,90,0,0" Name="Label17" VerticalAlignment="Top" Width="84" />
+                    <dxe:ComboBoxEdit HorizontalAlignment="Left" Margin="134,90,0,0" Name="Unittype_cb" VerticalAlignment="Top" Width="150" />
+                    <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="384,122,0,0" Name="Unit_btn" VerticalAlignment="Top" Width="75" />
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Unit Type" Name="UnitType">
+                <Grid >
+                    <Label Content="Unit Type" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="Label15" VerticalAlignment="Top" Width="108" FontSize="15" FontWeight="Bold"  />
+                    <Label Content="Unit Type:" Height="28" HorizontalAlignment="Left" Margin="6,52,0,0" Name="Label16" VerticalAlignment="Top" Width="84" />
+                    <dxe:TextEdit HorizontalAlignment="Left" Margin="134,53,0,0" Name="UnitType_txt" VerticalAlignment="Top" Width="150" />
+                    <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="384,122,0,0" Name="UnitType_btn" VerticalAlignment="Top" Width="75" />
+                </Grid>
+            </dx:DXTabItem>
+        </dx:DXTabControl>
+    </Grid>
+</Window>
