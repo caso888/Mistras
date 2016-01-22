@@ -79,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Data3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="gauge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +95,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Reporte.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Transformer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,6 +110,9 @@
     <Compile Include="Catalogs.xaml.vb">
       <DependentUpon>Catalogs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data3.xaml.vb">
+      <DependentUpon>Data3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gauge.xaml.vb">
       <DependentUpon>gauge.xaml</DependentUpon>
     </Compile>
@@ -110,6 +121,9 @@
     </Compile>
     <Compile Include="OilQuality.xaml.vb">
       <DependentUpon>OilQuality.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte.xaml.vb">
+      <DependentUpon>Reporte.xaml</DependentUpon>
     </Compile>
     <Compile Include="Transformer.xaml.vb">
       <DependentUpon>Transformer.xaml</DependentUpon>
