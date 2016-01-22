@@ -3,6 +3,7 @@ Imports System.Data
 Class Transformer
 
     Dim cnn As New SqlConnection(ConfigurationManager.ConnectionStrings("MyConnectionString").ConnectionString)
+
     Private Sub Transformer_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles Me.Closing
         Dim m As New MenuP()
         m.Show()
@@ -11,16 +12,16 @@ Class Transformer
     Private Sub Transformer_Loaded(sender As Object, e As System.Windows.RoutedEventArgs) Handles Me.Loaded
         'ComboBoxEdit8.SelectedIndex = 0
         'ComboBoxEdit8.Items.Add("[Unit]")
-        load_combos(2, 1)
+        carga_Voltaje(2, 2)
 
         'ComboBoxEdit9.SelectedIndex = 0
         'ComboBoxEdit9.Items.Add("[Unit]")
-        load_combos(2, 2)
+        carga_Capacity(2, 3)
 
 
         'ComboBoxEdit10.SelectedIndex = 0
         'ComboBoxEdit10.Items.Add("[Unit]")
-        load_combos(2, 3)
+        carga_Temp(2, 1)
 
         OilV_cb.SelectedIndex = 0
         OilV_cb.Items.Add("[Unit]")
@@ -69,6 +70,7 @@ Class Transformer
         desconectado()
 
     End Sub
+
     Public Function desconectado()
         Try
             If cnn.State = ConnectionState.Open Then
@@ -82,6 +84,7 @@ Class Transformer
             Return False
         End Try
     End Function
+
     Public Function conectado()
         Try
             If cnn.State = ConnectionState.Closed Then
@@ -96,6 +99,87 @@ Class Transformer
             Return False
         End Try
     End Function
+
+    Private Sub carga_Voltaje(ByVal tipo As Integer, ByVal tipo2 As Integer)
+
+        Voltage_cb.Items.Clear()
+
+        Dim dt As New DataTable
+        Dim ds As New DataSet
+        conectado()
+        Using cmd As New SqlCommand("Catalog_Read", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            Dim param1 As New SqlParameter("@Tipo", SqlDbType.Int)
+            param1.Value = tipo
+            Dim param2 As New SqlParameter("@Tipo2", SqlDbType.Int)
+            param2.Value = tipo2
+            cmd.Parameters.Add(param1)
+            cmd.Parameters.Add(param2)
+            Dim dr As SqlDataReader = cmd.ExecuteReader()
+
+            While dr.Read()
+                Voltage_cb.Items.Add(dr.Item(0))
+            End While
+            'dt.Load(dr)
+            'ds.Tables.Add(dt)
+        End Using
+        desconectado()
+    End Sub
+
+    Private Sub carga_Capacity(ByVal tipo As Integer, ByVal tipo2 As Integer)
+
+        Capacity_cb.Items.Clear()
+
+        Dim dt As New DataTable
+        Dim ds As New DataSet
+        conectado()
+        Using cmd As New SqlCommand("Catalog_Read", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            Dim param1 As New SqlParameter("@Tipo", SqlDbType.Int)
+            param1.Value = tipo
+            Dim param2 As New SqlParameter("@Tipo2", SqlDbType.Int)
+            param2.Value = tipo2
+            cmd.Parameters.Add(param1)
+            cmd.Parameters.Add(param2)
+            Dim dr As SqlDataReader = cmd.ExecuteReader()
+
+            While dr.Read()
+                Capacity_cb.Items.Add(dr.Item(0))
+            End While
+            'dt.Load(dr)
+            'ds.Tables.Add(dt)
+        End Using
+        desconectado()
+    End Sub
+
+    Private Sub carga_Temp(ByVal tipo As Integer, ByVal tipo2 As Integer)
+
+        WindTemp_cb.Items.Clear()
+
+        Dim dt As New DataTable
+        Dim ds As New DataSet
+        conectado()
+        Using cmd As New SqlCommand("Catalog_Read", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            Dim param1 As New SqlParameter("@Tipo", SqlDbType.Int)
+            param1.Value = tipo
+            Dim param2 As New SqlParameter("@Tipo2", SqlDbType.Int)
+            param2.Value = tipo2
+            cmd.Parameters.Add(param1)
+            cmd.Parameters.Add(param2)
+            Dim dr As SqlDataReader = cmd.ExecuteReader()
+
+            While dr.Read()
+                WindTemp_cb.Items.Add(dr.Item(0))
+            End While
+            'dt.Load(dr)
+            'ds.Tables.Add(dt)
+        End Using
+        desconectado()
+    End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles Button1.Click
 

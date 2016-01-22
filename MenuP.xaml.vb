@@ -73,4 +73,10 @@ Public Class MenuP
         gg.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Data_btn_Click(sender As System.Object, e As System.Windows.RoutedEventArgs) Handles Data_btn.Click
+        Dim dat As New Data3()
+        dat.Show()
+        Me.Hide()
+    End Sub
 End Class

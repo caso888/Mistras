@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing
 Imports DevExpress.Xpf.Core
 Imports DevExpress.Xpf.Gauges
+Imports System.Windows.Controls.Primitives
 
 Public Class gauge
 
@@ -23,5 +24,22 @@ Public Class gauge
         CircularGaugeControl1.Scales(0).RangeBars(0).Value = 20
         CircularGaugeControl1.Scales(0).RangeBars(0).AnchorValue = 100
 
+    End Sub
+
+    Private Sub CircularGaugeControl1_MouseLeave(sender As Object, e As System.Windows.Input.MouseEventArgs) Handles CircularGaugeControl1.MouseLeave
+        tooltip.IsOpen = False
+    End Sub
+
+    Private Sub CircularGaugeControl1_MouseMove(sender As Object, e As System.Windows.Input.MouseEventArgs) Handles CircularGaugeControl1.MouseMove
+        Dim hitInfo As CircularGaugeHitInfo = CircularGaugeControl1.CalcHitInfo(e.GetPosition(CircularGaugeControl1))
+
+        If hitInfo.InNeedle Then
+            tooltip_text.Text = "Value: " & hitInfo.Needle.Value.ToString()
+            tooltip.Placement = PlacementMode.Mouse
+
+            tooltip.IsOpen = True
+        Else
+            tooltip.IsOpen = False
+        End If
     End Sub
 End Class

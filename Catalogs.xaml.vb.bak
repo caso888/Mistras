@@ -37,7 +37,7 @@ Public Class Catalogs
         desconectado()
     End Sub
 
-    Private Sub Cat_insert2(ByVal Tipo As Integer, ByVal Value As String, ByVal Value3 As String)
+    Private Sub Cat_insert2(ByVal Tipo As Integer, ByVal Value As String, ByVal value2 As Integer)
         conectado()
         Using cmd As New SqlCommand("Catalog_Insert", cnn)
             cmd.CommandType = CommandType.StoredProcedure
@@ -45,8 +45,8 @@ Public Class Catalogs
             param1.Value = Tipo
             Dim param2 As New SqlParameter("@Value", SqlDbType.NVarChar)
             param2.Value = Value
-            Dim param3 As New SqlParameter("@Value3", SqlDbType.NVarChar)
-            param3.Value = Value3
+            Dim param3 As New SqlParameter("@Value2", SqlDbType.Int)
+            param3.Value = value2
 
             cmd.Parameters.Add(param1)
             cmd.Parameters.Add(param2)

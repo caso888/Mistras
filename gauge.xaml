@@ -17,6 +17,9 @@
                     </dxga:ArcScale.LabelOptions>
                     <dxga:ArcScale.Needles>
                         <dxga:ArcScaleNeedle Value="0">
+                            <dxga:ArcScaleNeedle.Animation>
+                                <dxga:IndicatorAnimation />
+                            </dxga:ArcScaleNeedle.Animation>
                             <dxga:ArcScaleNeedle.Presentation>
                                 <dxga:DefaultArcScaleNeedlePresentation Fill="#FFF80A0A" />
                             </dxga:ArcScaleNeedle.Presentation>
@@ -36,5 +39,10 @@
                 </dxga:ArcScale>
             </dxga:CircularGaugeControl.Scales>
         </dxga:CircularGaugeControl>
+        <Popup x:Name="tooltip" AllowsTransparency="True">
+            <Border CornerRadius="9" Background="White" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock x:Name="tooltip_text" />
+            </Border>
+        </Popup>
     </Grid>
 </Window>
