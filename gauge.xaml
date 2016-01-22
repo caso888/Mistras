@@ -24,6 +24,7 @@
                                 <dxga:DefaultArcScaleNeedlePresentation Fill="#FFF80A0A" />
                             </dxga:ArcScaleNeedle.Presentation>
                         </dxga:ArcScaleNeedle>
+                        <dxga:ArcScaleNeedle Value="0"/>
                     </dxga:ArcScale.Needles>
                     <dxga:ArcScale.Markers>
                         <dxga:ArcScaleMarker Value="6"/>

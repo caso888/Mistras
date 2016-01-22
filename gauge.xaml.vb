@@ -12,6 +12,7 @@ Public Class gauge
 
     Private Sub gauge_Loaded(sender As Object, e As System.Windows.RoutedEventArgs) Handles Me.Loaded
         CircularGaugeControl1.Scales(0).Needles(0).Value = 80
+        CircularGaugeControl1.Scales(0).Needles(1).Value = 30
         CircularGaugeControl1.Scales(0).StartValue = 0
         CircularGaugeControl1.Scales(0).EndValue = 150
         CircularGaugeControl1.Scales(0).Ranges(0).StartValue = New RangeValue(0)
@@ -33,8 +34,21 @@ Public Class gauge
     Private Sub CircularGaugeControl1_MouseMove(sender As Object, e As System.Windows.Input.MouseEventArgs) Handles CircularGaugeControl1.MouseMove
         Dim hitInfo As CircularGaugeHitInfo = CircularGaugeControl1.CalcHitInfo(e.GetPosition(CircularGaugeControl1))
 
+        Dim ss As String
+
+        
+
         If hitInfo.InNeedle Then
-            tooltip_text.Text = "Value: " & hitInfo.Needle.Value.ToString()
+            Select Case hitInfo.Needle.Value.ToString()
+                Case 800
+                    ss = "Primera"
+                Case 300
+                    ss = "Segunda"
+                Case Else
+                    ss = "No encontrada"
+            End Select
+            'tooltip_text.Text = "Value: " & hitInfo.Needle.Value.ToString()
+            tooltip_text.Text = ss
             tooltip.Placement = PlacementMode.Mouse
 
             tooltip.IsOpen = True
